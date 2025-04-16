@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('proveedores', function (Blueprint $table) {
+        Schema::create('caracteristicas', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('persona_id')->unique()->constrained('personas')->onDelete('cascade');
+            $table->string('nombre',60);
+            $table->string('descripcion',255)->nullable();
+            $table->tinyInteger('estado')->default(1);
 
             $table->timestamps();
         });
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('proveedores');
+        Schema::dropIfExists('caracteristicas');
     }
 };
