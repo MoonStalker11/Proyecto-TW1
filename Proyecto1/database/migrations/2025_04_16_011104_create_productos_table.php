@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
 
-            $table->dateTime('codigo',50);
-            $table->decimal('nombre',80);
-            $table->decimal('stock')->unsigned()->default(0);
-            $table->foreignId('descripcion',255)->nullable();
-            $table->foreignId('fecha_vencimiento')->nullable();
-            $table->foreignId('img_path',255)->nullable();
+            $table->string('codigo',50);
+            $table->string('nombre',80);
+            $table->integer('stock')->unsigned()->default(0);
+            $table->string('descripcion',255)->nullable();
+            $table->date('fecha_vencimiento')->nullable();
+            $table->string('img_path',255)->nullable();
             $table->tinyInteger('estado')->default(1);
             $table->foreignId('marca_id')->constrained('marcas')->onDelete('cascade');
             $table->foreignId('presentacione_id')->constrained('presentaciones')->onDelete('cascade');
