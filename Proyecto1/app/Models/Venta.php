@@ -5,9 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ventas extends Model
+class Venta extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
 
     public function cliente(){
         return $this->belongsTo(Cliente::class);
@@ -17,7 +19,7 @@ class Ventas extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function comrobante(){
+    public function comprobante(){
         return $this->belongsTo(Comprobante::class);
     }
 

@@ -54,6 +54,32 @@
                             </div-->
                             <div class="sb-sidenav-menu-heading">Modulos</div>
 
+                            <!----Compras---->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCompras" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-store"></i></div>
+                                Compras
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseCompras" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="{{ route('compras.index') }}">Ver</a>
+                                    <a class="nav-link" href="{{ route('compras.create') }}">Crear</a>
+                                </nav>
+                            </div>
+
+                            <!----Ventas---->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseVentas" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                                Ventas
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseVentas" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="{{ route('ventas.index') }}">Ver</a>
+                                    <a class="nav-link" href="{{ route('ventas.create') }}">Crear</a>
+                                </nav>
+                            </div>
+
                             <a class="nav-link" href="{{ route('categorias.index') }}">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-tag"></i></div>
                                 Categorías
@@ -82,18 +108,7 @@
                                 Proveedores
                             </a>
 
-                            <!----Compras---->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCompras" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-store"></i></div>
-                                Compras
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseCompras" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{ route('compras.index') }}">Ver</a>
-                                    <a class="nav-link" href="{{ route('compras.create') }}">Crear</a>
-                                </nav>
-                            </div>
+                            
 
                         </div>
                     </div>
