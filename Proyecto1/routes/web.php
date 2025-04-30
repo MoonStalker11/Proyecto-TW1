@@ -2,9 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\categoriaController;
+use App\Http\Controllers\clienteController;
 use App\Http\Controllers\marcaController;
 use App\Http\Controllers\presentacioneController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\proveedorController;
+use App\Http\Controllers\compraController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +32,9 @@ Route::resources([
     'presentaciones' => presentacioneController::class,
     'marcas' => marcaController::class,
     'productos' => ProductoController::class,
+    'clientes' => clienteController::class,
+    'proveedores' => proveedorController::class,
+    'compras' => compraController::class,
 ]);
 
 Route::get('login', function () {
