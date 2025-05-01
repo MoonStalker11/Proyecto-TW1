@@ -11,6 +11,7 @@ use App\Http\Controllers\compraController;
 use App\Http\Controllers\ventaController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\logoutController;
 
 
 /*
@@ -39,7 +40,7 @@ Route::resources([
 
 Route::get('/login',[loginController::class,'index'])->name('login');
 Route::post('/login',[loginController::class,'login']);
-//Route::get('/logout',[logoutController::class,'logout'])->name('logout');
+Route::get('/logout',[logoutController::class,'logout'])->name('logout');
 
 Route::get('401', function () {
     return view('pages.401');
